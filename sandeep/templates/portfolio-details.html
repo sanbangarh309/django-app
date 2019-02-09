@@ -1,0 +1,58 @@
+{% extends "master.html" %}
+{% block body %}
+{% load san_custom %}
+	<!-- start banner Area -->
+	<section class="banner-area relative">
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						Portfolio Details
+					</h1>
+					<p class="link-nav">
+						<span class="box">
+							<a href="./">Home </a>
+							<a href="./portfolio">Portfolio</a>
+							<a href="./portfolio-details">Portfolio Details</a></p>
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+
+	<!-- Portfolio Details Area -->
+	<section class="portfolio_details_area section-gap">
+		<div class="container">
+			<div class="portfolio_details_inner">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="left_img">
+							<img class="img-fluid" src="{{project.image|cut:"sandeep/"}}" alt="">
+						</div>
+					</div>
+					<div class="offset-md-1 col-md-5">
+						<div class="portfolio_right_text mt-30">
+							<h4>{{project.name}}</h4>
+							<ul class="list">
+								<li><span>Rating</span>: <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+									 class="fa fa-star"></i></li>
+								<li><span>Client</span>: colorlib</li>
+								<li><span>Website</span>: colorlib.com</li>
+								<li><span>Completed</span>: 17 Aug 2018</li>
+							</ul>
+							<ul class="list social_details">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-behance"></i></a></li>
+								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<p>{{project.about}}</p>
+			</div>
+		</div>
+	</section>
+{% endblock %}
